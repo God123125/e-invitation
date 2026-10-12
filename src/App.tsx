@@ -40,17 +40,17 @@ export default function App() {
 
   // Gallery items matching reference
   const galleryPhotos = [
-    { src: "/img/pre-wedding1.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
-    { src: "/img/pre-wedding2.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
-    { src: "/img/pre-wedding3.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
-    { src: "/img/pre-wedding4.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
-    { src: "/img/pre-wedding5.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
-    { src: "/img/pre-wedding6.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
-    { src: "/img/pre-wedding7.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
-    { src: "/img/pre-wedding8.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
-    { src: "/img/pre-wedding9.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
-    { src: "/img/pre-wedding10.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
-    { src: "/img/pre-wedding11.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding1-thumb.jpg", full: "/img/gallery/pre-wedding1.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding2-thumb.jpg", full: "/img/gallery/pre-wedding2.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding3-thumb.jpg", full: "/img/gallery/pre-wedding3.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding4-thumb.jpg", full: "/img/gallery/pre-wedding4.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding5-thumb.jpg", full: "/img/gallery/pre-wedding5.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding6-thumb.jpg", full: "/img/gallery/pre-wedding6.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding7-thumb.jpg", full: "/img/gallery/pre-wedding7.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding8-thumb.jpg", full: "/img/gallery/pre-wedding8.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding9-thumb.jpg", full: "/img/gallery/pre-wedding9.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding10-thumb.jpg", full: "/img/gallery/pre-wedding10.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
+    { thumb: "/img/gallery/pre-wedding11-thumb.jpg", full: "/img/gallery/pre-wedding11.jpg", caption: "ម៉ារ៉ាឌី & សុជាតា" },
   ];
 
   // Embers animation canvas
@@ -1109,9 +1109,10 @@ export default function App() {
                 className="gallery__item overflow-hidden rounded-xl border border-[#e0a995]/40 shadow-lg group relative cursor-pointer"
               >
                 <img
-                  src={photo.src}
+                  src={photo.thumb}
                   alt={photo.caption}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-48 sm:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -1302,8 +1303,9 @@ export default function App() {
         >
           <img
             id="lb-img"
-            src={galleryPhotos[lightboxIndex].src}
+            src={galleryPhotos[lightboxIndex].full}
             alt={galleryPhotos[lightboxIndex].caption}
+            decoding="async"
           />
           <button
             className="lb-btn lb-close"

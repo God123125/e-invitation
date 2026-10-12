@@ -13,7 +13,8 @@ interface PhotoCard {
   id: string;
   titleKm: string;
   titleEn: string;
-  src: string;
+  thumbSrc: string;
+  fullSrc: string;
   aspect: "portrait" | "landscape" | "square";
 }
 
@@ -29,56 +30,88 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ lang }) => {
       id: "g1",
       titleKm: "ទិដ្ឋភាពមុនថ្ងៃមង្គល",
       titleEn: "Moments Before Vows",
-      src: "/img/pre-wedding1.jpg",
+      thumbSrc: "/img/gallery/pre-wedding1-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding1.jpg",
       aspect: "portrait",
     },
     {
       id: "g2",
       titleKm: "ស្នាមញញឹមនៃក្តីស្រលាញ់",
       titleEn: "Smile of Pure Love",
-      src: "/img/pre-wedding2.jpg",
+      thumbSrc: "/img/gallery/pre-wedding2-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding2.jpg",
       aspect: "portrait",
     },
     {
       id: "g3",
       titleKm: "ដំណើររួមគ្នាក្នុងជីវិត",
       titleEn: "Walking Together in Life",
-      src: "/img/pre-wedding3.jpg",
+      thumbSrc: "/img/gallery/pre-wedding3-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding3.jpg",
       aspect: "portrait",
     },
     {
       id: "g4",
       titleKm: "ពេលវេលាដ៏មានតម្លៃ",
       titleEn: "Precious Moments",
-      src: "/img/pre-wedding4.jpg",
+      thumbSrc: "/img/gallery/pre-wedding4-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding4.jpg",
       aspect: "portrait",
     },
     {
       id: "g5",
       titleKm: "ភាពកក់ក្តៅក្នុងបេះដូង",
       titleEn: "Warmth of Two Hearts",
-      src: "/img/pre-wedding5.jpg",
+      thumbSrc: "/img/gallery/pre-wedding5-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding5.jpg",
       aspect: "portrait",
     },
     {
       id: "g6",
       titleKm: "អនុស្សាវរីយ៍ផ្អែមល្ហែម",
       titleEn: "Sweet Memories",
-      src: "/img/pre-wedding6.jpg",
+      thumbSrc: "/img/gallery/pre-wedding6-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding6.jpg",
       aspect: "portrait",
     },
     {
       id: "g7",
       titleKm: "ដំណើរនៃក្តីស្រឡាញ់",
       titleEn: "The Journey of Love",
-      src: "/img/pre-wedding7.jpg",
+      thumbSrc: "/img/gallery/pre-wedding7-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding7.jpg",
       aspect: "portrait",
     },
     {
       id: "g8",
       titleKm: "សេចក្តីស្ងប់និងសុភមង្គល",
       titleEn: "Peace & Eternal Happiness",
-      src: "/img/pre-wedding8.jpg",
+      thumbSrc: "/img/gallery/pre-wedding8-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding8.jpg",
+      aspect: "portrait",
+    },
+    {
+      id: "g9",
+      titleKm: "ក្តីសង្ឃឹមនិងអនាគត",
+      titleEn: "Hope & Endless Future",
+      thumbSrc: "/img/gallery/pre-wedding9-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding9.jpg",
+      aspect: "portrait",
+    },
+    {
+      id: "g10",
+      titleKm: "ក្តីស្រឡាញ់ដែលមិនប្រែប្រួល",
+      titleEn: "Unconditional Love",
+      thumbSrc: "/img/gallery/pre-wedding10-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding10.jpg",
+      aspect: "portrait",
+    },
+    {
+      id: "g11",
+      titleKm: "ថ្ងៃស្អែកដ៏ស្រស់បំព្រង",
+      titleEn: "A Beautiful Tomorrow",
+      thumbSrc: "/img/gallery/pre-wedding11-thumb.jpg",
+      fullSrc: "/img/gallery/pre-wedding11.jpg",
       aspect: "portrait",
     },
   ];
@@ -118,10 +151,11 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ lang }) => {
               }}
             >
               <img
-                src={item.src}
+                src={item.thumbSrc}
                 alt={item.titleKm}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-3 flex flex-col justify-end">
                 <p className="font-kh font-semibold text-xs text-[#f8e1d6]">
@@ -168,9 +202,10 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ lang }) => {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={photos[selectedPhotoIndex].src}
+                src={photos[selectedPhotoIndex].fullSrc}
                 alt={photos[selectedPhotoIndex].titleKm}
                 className="max-h-[75vh] max-w-full rounded-xl border border-[#e0a995]/60 shadow-2xl object-contain"
+                decoding="async"
               />
               <button
                 onClick={(e) => {

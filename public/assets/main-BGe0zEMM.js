@@ -10608,9 +10608,9 @@ var Wu = () => `
 <svg viewBox="0 0 70 70" aria-hidden="true">
   <defs><radialGradient id="kflame" cx=".5" cy=".7" r=".6"><stop offset="0" stop-color="#fff6d8"/><stop offset=".5" stop-color="#ffb65c"/><stop offset="1" stop-color="#ff7a2a" stop-opacity="0"/></radialGradient></defs>
   <circle cx="35" cy="22" r="16" fill="url(#kflame)" opacity=".5"/>
-  <path d="M8 50 Q35 64 62 50 L58 44 Q35 54 12 44 Z" fill="#4a2a2a" stroke="url(#g-foil)" stroke-width=".8"/>
-  <path d="M35 46 C28 40 26 32 30 26 C33 32 34 38 35 46 Z M35 46 C42 40 44 32 40 26 C37 32 36 38 35 46 Z M35 46 C24 46 18 40 18 34 C26 36 31 40 35 46 Z M35 46 C46 46 52 40 52 34 C44 36 39 40 35 46 Z" fill="#b2455e" stroke="#f8e1d6" stroke-width=".5"/>
-  <rect x="33.6" y="22" width="2.8" height="14" rx="1" fill="#fbf5f0"/>
+  <path d="M8 50 Q35 64 62 50 L58 44 Q35 54 12 44 Z" fill="#4f5a26" stroke="url(#g-foil)" stroke-width=".8"/>
+  <path d="M35 46 C28 40 26 32 30 26 C33 32 34 38 35 46 Z M35 46 C42 40 44 32 40 26 C37 32 36 38 35 46 Z M35 46 C24 46 18 40 18 34 C26 36 31 40 35 46 Z M35 46 C46 46 52 40 52 34 C44 36 39 40 35 46 Z" fill="#c72c6a" stroke="#f3a6c3" stroke-width=".5"/>
+  <rect x="33.6" y="22" width="2.8" height="14" rx="1" fill="#f5efdd"/>
   <path d="M35 13 C37.5 16 37.5 19 35 21.5 C32.5 19 32.5 16 35 13 Z" fill="url(#kflame)"/>
 </svg>`,
   Ju = `M0 0 C-10 -16 -14 -36 -6 -54 C0 -68 12 -77 21 -85 C27 -90 35 -87 34 -79 C33 -73 26 -73 26 -78 C21 -71 14 -64 15 -54 C16 -42 24 -38 23 -27 C22 -14 12 -6 0 0 Z`,
@@ -10679,10 +10679,10 @@ function sd({ groom: e, bride: t, cls: n = ``, crest: r = !0 } = {}) {
   return `
 <div class="lockup ${n}" role="img" aria-label="${e} & ${t}">
   <svg class="lk-orn" viewBox="0 0 600 470" aria-hidden="true">
-    ${r ? `<g class="lk-crest" transform="translate(300 32) scale(.38)">${td()}</g>` : ``}
-    <path class="lk-swash" d="M40 230 C90 265 110 270 115 250 C120 230 95 225 90 250 C85 285 140 365 252 414"/>
-    <path class="lk-swash lk-swash2" d="M288 414 C355 435 450 442 565 425"/>
-    <path class="lk-heart" d="M270 400 C263 388 248 392 250 405 C252 416 270 425 270 432 C270 425 288 416 290 405 C292 392 277 388 270 400 Z"/>
+    ${r ? `<g class="lk-crest" transform="translate(260 46) scale(.4)">${td()}</g>` : ``}
+    <path class="lk-swash" d="M 45 220 C 120 232, 170 230, 205 242 C 228 250, 235 285, 212 288 C 190 290, 188 260, 214 260 C 228 260, 236 268, 240 274"/>
+    <path class="lk-swash lk-swash2" d="M 298 348 C 365 368, 450 368, 515 342"/>
+    <path class="lk-heart" d="M 240 285 C 240 285, 229 277, 229 270 C 229 266, 232 263, 236 263 C 238 263, 239.5 264.5, 240 266 C 240.5 264.5, 242 263, 244 263 C 248 263, 251 266, 251 270 C 251 277, 240 285, 240 285 Z"/>
   </svg>
   <span class="lk-name lk-groom" aria-hidden="true">${e}</span>
   <span class="lk-name lk-bride" aria-hidden="true">${t}</span>
@@ -10728,29 +10728,29 @@ function fd() {
 <svg viewBox="0 0 140 140" aria-hidden="true">
   <defs>
     <radialGradient id="wax" cx="38%" cy="32%" r="75%">
-      <stop offset="0" stop-color="#f8e1d6"/><stop offset=".45" stop-color="#e0a995"/><stop offset="1" stop-color="#a8695a"/>
+      <stop offset="0" stop-color="#e7c97a"/><stop offset=".45" stop-color="#b98c35"/><stop offset="1" stop-color="#6e4c14"/>
     </radialGradient>
     <filter id="wax-lit" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="2.6" result="b"/>
-      <feSpecularLighting in="b" surfaceScale="5" specularConstant=".9" specularExponent="22" lighting-color="#fbf5f0" result="s">
+      <feSpecularLighting in="b" surfaceScale="5" specularConstant=".9" specularExponent="22" lighting-color="#fff6dc" result="s">
         <fePointLight x="20" y="-10" z="90"/>
       </feSpecularLighting>
       <feComposite in="s" in2="SourceAlpha" operator="in" result="s2"/>
       <feComposite in="SourceGraphic" in2="s2" operator="arithmetic" k1="0" k2="1" k3=".75" k4="0"/>
     </filter>
     <filter id="wax-press" x="-30%" y="-30%" width="160%" height="160%">
-      <feOffset dx="-1.2" dy="-1.2" in="SourceAlpha" result="hi"/><feFlood flood-color="#4a2a2a" flood-opacity=".75"/><feComposite in2="hi" operator="in" result="dark"/>
-      <feOffset dx="1.2" dy="1.4" in="SourceAlpha" result="lo"/><feFlood flood-color="#fbf5f0" flood-opacity=".7"/><feComposite in2="lo" operator="in" result="light"/>
+      <feOffset dx="-1.2" dy="-1.2" in="SourceAlpha" result="hi"/><feFlood flood-color="#3b2706" flood-opacity=".75"/><feComposite in2="hi" operator="in" result="dark"/>
+      <feOffset dx="1.2" dy="1.4" in="SourceAlpha" result="lo"/><feFlood flood-color="#fff3cf" flood-opacity=".7"/><feComposite in2="lo" operator="in" result="light"/>
       <feMerge><feMergeNode in="light"/><feMergeNode in="dark"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
   <path d="${dd(70, 72, 60, 5)}" fill="#000" opacity=".35" transform="translate(2 5)" style="filter:blur(3px)"/>
   <g filter="url(#wax-lit)">
     <path d="${dd(70, 70, 60, 5)}" fill="url(#wax)"/>
-    <circle cx="70" cy="70" r="44" fill="#e0a995"/>
+    <circle cx="70" cy="70" r="44" fill="#a97d2c"/>
   </g>
-  <circle cx="70" cy="70" r="44" fill="none" stroke="#a8695a" stroke-opacity=".55" stroke-width="1.4"/>
-  <circle cx="70" cy="70" r="39" fill="none" stroke="#f8e1d6" stroke-opacity=".35" stroke-width=".8" stroke-dasharray="1.6 3"/>
+  <circle cx="70" cy="70" r="44" fill="none" stroke="#5e400f" stroke-opacity=".55" stroke-width="1.4"/>
+  <circle cx="70" cy="70" r="39" fill="none" stroke="#f3dc9c" stroke-opacity=".35" stroke-width=".8" stroke-dasharray="1.6 3"/>
   <g filter="url(#wax-press)" transform="translate(70 92) scale(.36)" class="wax-crest">${td()}</g>
 </svg>`;
 }
@@ -14359,7 +14359,10 @@ async function jp(e) {
   if (kp !== null) return kp;
   try {
     let t = await fetch(e, { method: `HEAD` });
-    kp = t.ok && (t.headers.get(`content-type`) || ``).includes(`audio`);
+    if (!t.ok && t.status === 405) {
+      t = await fetch(e, { method: `GET` });
+    }
+    kp = t.ok;
   } catch {
     kp = !1;
   }
@@ -14516,7 +14519,10 @@ function Xp() {
     Q(`[data-orn="divider"]`).forEach((e) => (e.innerHTML = od(`divider`))),
     (Z(`#pre-lotus`).innerHTML = Hu(`pre-lotus-svg`)),
     (Z(`#couple-butterfly`).innerHTML = Ru()));
-  let t = { groom: e.couple.groom.km.split(` `).pop(), bride: `សុជាតា` };
+  let t = {
+    groom: e.couple.groom.shortKm || e.couple.groom.km.split(` `).pop(),
+    bride: e.couple.bride.shortKm || e.couple.bride.km.split(` `).pop(),
+  };
   (Q(`[data-lockup]`).forEach(
     (e) =>
       (e.innerHTML = sd({
@@ -14594,8 +14600,8 @@ var Qp = [
   {
     k: `/img/memory5.jpg`,
     ar: `2/3`,
-    km: `ឆ្លងឆ្នាំនៅកំពត`,
-    en: `Countdown in Kampot`,
+    km: `ដំណើរកំសាន្តទៅកំពត`,
+    en: `Travel to Kampot`,
     v: `up`,
   },
   {
@@ -14675,8 +14681,14 @@ function tm() {
       "bride-km": i.km,
       "groom-en": n.en,
       "bride-en": i.en,
-      "groom-short": $ === `km` ? n.km.split(` `).pop() : n.en.split(` `).pop(),
-      "bride-short": $ === `km` ? `សុជាតា` : i.en.split(` `).pop(),
+      "groom-short":
+        $ === `km`
+          ? n.shortKm || n.km.split(` `).pop()
+          : n.shortEn || n.en.split(` `).pop(),
+      "bride-short":
+        $ === `km`
+          ? i.shortKm || i.km.split(` `).pop()
+          : i.shortEn || i.en.split(` `).pop(),
     };
   (Q(`[data-name]`).forEach((e) => (e.textContent = a[e.dataset.name])),
     (Z(`#names-en`).textContent = `${n.en}  &  ${i.en}`));
@@ -14799,7 +14811,10 @@ function sm(t) {
   let n = Z(`#gate`),
     i = r(e.date, $).short;
   (pd(Z(`#env-mount`), {
-    names: { groom: e.couple.groom.km.split(` `).pop(), bride: `សុជាតា` },
+    names: {
+      groom: e.couple.groom.shortKm || e.couple.groom.km.split(` `).pop(),
+      bride: e.couple.bride.shortKm || e.couple.bride.km.split(` `).pop(),
+    },
     dateShort: i,
   }),
     Q(`#env-mount [data-t]`).forEach((e) => (e.textContent = Yp(e.dataset.t))),
@@ -15289,9 +15304,9 @@ function ym() {
       invalidateOnRefresh: !0,
     },
   })
-    .to(e, { backgroundColor: `#5c3535`, ease: `none`, duration: 1 })
-    .to(e, { backgroundColor: `#4a2a2a`, ease: `none`, duration: 1 })
-    .to(e, { backgroundColor: `#1e0c0c`, ease: `none`, duration: 1 }),
+    .to(e, { backgroundColor: `#4a4a22`, ease: `none`, duration: 1 })
+    .to(e, { backgroundColor: `#4a2a1a`, ease: `none`, duration: 1 })
+    .to(e, { backgroundColor: `#120f0b`, ease: `none`, duration: 1 }),
     Q(`.shot`, t).forEach((e) => {
       let t = Z(`img`, e);
       (W.fromTo(
@@ -15496,7 +15511,7 @@ async function wm() {
       (a.dataset.i = t),
       a.setAttribute(`aria-label`, `Photo ${t + 1}`),
       (a.style.aspectRatio = `${e.w} / ${e.h}`),
-      (a.innerHTML = `<img src="/img/${e.id}.${e.ext || `jpg`}" alt="" loading="lazy" decoding="async"/>`),
+      (a.innerHTML = `<img src="${e.thumb || `/img/gallery/${e.id}-thumb.jpg`}" alt="" loading="lazy" decoding="async"/>`),
       n[i].appendChild(a));
   }),
     e.addEventListener(`click`, (e) => {
@@ -15547,7 +15562,7 @@ function Em(e) {
   Tm = (e + Cm.length) % Cm.length;
   let r = Cm[Tm],
     i = Z(`#lb-img`);
-  ((i.src = `/img/${r.id}.${r.ext || `jpg`}`),
+  ((i.src = r.src || `/img/gallery/${r.id}.jpg`),
     (Z(`#lb-count`).textContent =
       $ === `km`
         ? `${t(Tm + 1)} / ${t(Cm.length)}`

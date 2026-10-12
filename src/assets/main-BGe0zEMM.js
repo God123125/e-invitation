@@ -14359,7 +14359,10 @@ async function jp(e) {
   if (kp !== null) return kp;
   try {
     let t = await fetch(e, { method: `HEAD` });
-    kp = t.ok && (t.headers.get(`content-type`) || ``).includes(`audio`);
+    if (!t.ok && t.status === 405) {
+      t = await fetch(e, { method: `GET` });
+    }
+    kp = t.ok;
   } catch {
     kp = !1;
   }
@@ -14517,8 +14520,8 @@ function Xp() {
     (Z(`#pre-lotus`).innerHTML = Hu(`pre-lotus-svg`)),
     (Z(`#couple-butterfly`).innerHTML = Ru()));
   let t = {
-    groom: e.couple.groom.km.split(` `).pop(),
-    bride: e.couple.bride.km.split(` `).pop(),
+    groom: e.couple.groom.shortKm || e.couple.groom.km.split(` `).pop(),
+    bride: e.couple.bride.shortKm || e.couple.bride.km.split(` `).pop(),
   };
   (Q(`[data-lockup]`).forEach(
     (e) =>
@@ -14678,8 +14681,14 @@ function tm() {
       "bride-km": i.km,
       "groom-en": n.en,
       "bride-en": i.en,
-      "groom-short": $ === `km` ? n.km.split(` `).pop() : n.en.split(` `).pop(),
-      "bride-short": $ === `km` ? i.km.split(` `).pop() : i.en.split(` `).pop(),
+      "groom-short":
+        $ === `km`
+          ? n.shortKm || n.km.split(` `).pop()
+          : n.shortEn || n.en.split(` `).pop(),
+      "bride-short":
+        $ === `km`
+          ? i.shortKm || i.km.split(` `).pop()
+          : i.shortEn || i.en.split(` `).pop(),
     };
   (Q(`[data-name]`).forEach((e) => (e.textContent = a[e.dataset.name])),
     (Z(`#names-en`).textContent = `${n.en}  &  ${i.en}`));
@@ -14803,8 +14812,8 @@ function sm(t) {
     i = r(e.date, $).short;
   (pd(Z(`#env-mount`), {
     names: {
-      groom: e.couple.groom.km.split(` `).pop(),
-      bride: e.couple.bride.km.split(` `).pop(),
+      groom: e.couple.groom.shortKm || e.couple.groom.km.split(` `).pop(),
+      bride: e.couple.bride.shortKm || e.couple.bride.km.split(` `).pop(),
     },
     dateShort: i,
   }),
@@ -15502,7 +15511,7 @@ async function wm() {
       (a.dataset.i = t),
       a.setAttribute(`aria-label`, `Photo ${t + 1}`),
       (a.style.aspectRatio = `${e.w} / ${e.h}`),
-      (a.innerHTML = `<img src="/img/${e.id}.${e.ext || `jpg`}" alt="" loading="lazy" decoding="async"/>`),
+      (a.innerHTML = `<img src="${e.thumb || `/img/gallery/${e.id}-thumb.jpg`}" alt="" loading="lazy" decoding="async"/>`),
       n[i].appendChild(a));
   }),
     e.addEventListener(`click`, (e) => {
@@ -15553,7 +15562,7 @@ function Em(e) {
   Tm = (e + Cm.length) % Cm.length;
   let r = Cm[Tm],
     i = Z(`#lb-img`);
-  ((i.src = `/img/${r.id}.${r.ext || `jpg`}`),
+  ((i.src = r.src || `/img/gallery/${r.id}.jpg`),
     (Z(`#lb-count`).textContent =
       $ === `km`
         ? `${t(Tm + 1)} / ${t(Cm.length)}`
