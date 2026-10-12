@@ -333,7 +333,7 @@ export function sd({
 } = {}) {
   return `<div class="lockup ${cls}" role="img" aria-label="${groom} & ${bride}">
   <svg class="lk-orn" viewBox="0 0 600 470" aria-hidden="true">
-    ${r ? `<g class="lk-crest" transform="translate(260 46) scale(.4)">${td()}</g>` : ``}
+    ${crest ? `<g class="lk-crest" transform="translate(260 46) scale(.4)">${td()}</g>` : ``}
     <path class="lk-swash" d="M 45 220 C 120 232, 170 230, 205 242 C 228 250, 235 285, 212 288 C 190 290, 188 260, 214 260 C 228 260, 236 268, 240 274"/>
     <path class="lk-swash lk-swash2" d="M 298 348 C 365 368, 450 368, 515 342"/>
     <path class="lk-heart" d="M 240 285 C 240 285, 229 277, 229 270 C 229 266, 232 263, 236 263 C 238 263, 239.5 264.5, 240 266 C 240.5 264.5, 242 263, 244 263 C 248 263, 251 266, 251 270 C 251 277, 240 285, 240 285 Z"/>
