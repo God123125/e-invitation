@@ -1,0 +1,285 @@
+@import "./wedding-theme.css";
+
+/* Groom & Bride names font Battambang */
+.lk-name,
+.lk-groom,
+.lk-bride,
+.person__name,
+[data-name="groom-km"],
+[data-name="bride-km"],
+[data-name="groom-en"],
+[data-name="bride-en"],
+.hero__en,
+#names-en,
+.env__card-names,
+footer [data-name="groom-km"],
+footer [data-name="bride-km"] {
+  font-family: "Battambang", "Moul", system-ui, sans-serif !important;
+}
+
+.lk-name {
+  font-weight: 700 !important;
+  padding-top: 0.3em;
+  padding-bottom: 0.2em;
+}
+
+.person__name {
+  font-weight: 700 !important;
+}
+
+.foil {
+  padding-top: 0.25em;
+  padding-bottom: 0.2em;
+}
+
+/* Ensure body takes full viewport with correct theme background */
+html,
+body {
+  background-color: var(--deep);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   ENVELOPE & LOCKUP PERFECTION (BLUSH & ROSE GOLD)
+   - Bride name: សុជាតា only
+   - Battambang font for groom & bride
+   - No overflow on any screen size or card frame
+   ========================================================= */
+
+/* Gate & Viewport Fit */
+.gate {
+  overflow: hidden !important;
+  display: grid !important;
+  place-items: center !important;
+}
+.gate__stage {
+  gap: clamp(0.5rem, 1.6vh, 1.1rem) !important;
+  padding: 0.5rem 1rem !important;
+  max-width: 100vw !important;
+  max-height: 100svh !important;
+  box-sizing: border-box !important;
+}
+.gate__hint {
+  font-family: "Battambang", var(--f-kh), sans-serif !important;
+  font-size: clamp(0.72rem, 2.2vw, 0.88rem) !important;
+  letter-spacing: 0.05em !important;
+  color: var(--ink-dim) !important;
+  margin-top: 0.2rem !important;
+}
+
+/* Envelope Dimensional Proportions */
+.e2 {
+  --w: min(84vw, 52svh, 460px) !important;
+  width: var(--w) !important;
+  height: calc(var(--w) * 0.94) !important;
+  perspective: 1600px !important;
+  perspective-origin: 50% 30% !important;
+  position: relative !important;
+  margin: 0 auto !important;
+}
+.e2__stage {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* Flap Logo (On Envelope Exterior) - No clipping, no overflow */
+.e2__flap-logo {
+  position: absolute !important;
+  top: 6% !important;
+  left: 20% !important;
+  right: 20% !important;
+  width: 60% !important;
+  margin: 0 auto !important;
+  pointer-events: none !important;
+  overflow: visible !important;
+}
+.e2__flap-logo .lockup,
+.lk-env {
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+.lk-env .lk-orn {
+  overflow: visible !important;
+}
+.lk-env .lk-name {
+  font-family: "Battambang", var(--f-moul), sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 15.5cqw !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+  letter-spacing: 0.01em !important;
+  padding: 0.25em 0.15em 0.35em !important;
+  margin: 0 !important;
+  background: var(--foil-grad) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  filter: drop-shadow(0 1px 2px rgba(74, 42, 42, 0.38)) !important;
+}
+.lk-env .lk-groom {
+  top: 9% !important;
+  left: 5% !important;
+  right: auto !important;
+}
+.lk-env .lk-bride {
+  top: 42% !important;
+  right: 5% !important;
+  left: auto !important;
+}
+.lk-env .lk-butterfly {
+  width: 13% !important;
+  top: 17% !important;
+  right: 7% !important;
+}
+
+/* Envelope Card (Inside the Envelope) */
+.e2__card {
+  border-radius: 4px !important;
+  box-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.28),
+    inset 0 0 32px rgba(168, 105, 90, 0.12) !important;
+}
+.e2__card-frame {
+  border: 1px solid rgba(168, 105, 90, 0.45) !important;
+  box-shadow:
+    0 0 0 3px rgba(251, 245, 240, 0.6),
+    inset 0 0 0 4px rgba(168, 105, 90, 0.28) !important;
+}
+.e2__card-inner {
+  position: absolute !important;
+  top: 7% !important;
+  bottom: 7% !important;
+  left: 7% !important;
+  right: 7% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 2% !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+.e2__card-kicker {
+  font-family: "Battambang", var(--f-moul), sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 3.8cqw !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+  background: var(--foil-grad) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  margin: 0 !important;
+}
+.e2__card .lockup,
+.lk-card {
+  width: 65% !important;
+  margin: 0.1rem auto !important;
+}
+.lk-card .lk-orn {
+  overflow: visible !important;
+}
+.lk-card .lk-name {
+  font-family: "Battambang", var(--f-moul), sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 16cqw !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+  letter-spacing: 0.01em !important;
+  padding: 0.25em 0.15em 0.35em !important;
+  margin: 0 !important;
+  background: var(--foil-grad) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  filter: none !important;
+}
+.lk-card .lk-groom {
+  top: 9% !important;
+  left: 5% !important;
+  right: auto !important;
+}
+.lk-card .lk-bride {
+  top: 42% !important;
+  right: 5% !important;
+  left: auto !important;
+}
+.e2__card-invite {
+  font-family: "Battambang", var(--f-moul), sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 3.2cqw !important;
+  line-height: 1.3 !important;
+  color: #4a2a2a !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+}
+.e2__card-date {
+  font-family: "Battambang", var(--f-kh), sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 2.8cqw !important;
+  letter-spacing: 0.2em !important;
+  background: var(--foil-grad) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* Global Lockup Rules (Covers, Hero, HUD) */
+.lockup .lk-name {
+  font-family: "Battambang", var(--f-moul), system-ui, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 17cqw !important;
+  white-space: nowrap !important;
+  line-height: 1.1 !important;
+  padding: 0.28em 0.14em 0.35em !important;
+  margin: 0 !important;
+}
+.lockup .lk-groom {
+  top: 9% !important;
+  left: 4% !important;
+  right: auto !important;
+}
+.lockup .lk-bride {
+  top: 42% !important;
+  right: 4% !important;
+  left: auto !important;
+}
+
+/* Bottom Pocket Date in Foil */
+.e2__date {
+  font-family: "Battambang", var(--f-kh), sans-serif !important;
+  font-weight: 700 !important;
+  font-size: calc(var(--w) * 0.032) !important;
+  letter-spacing: 0.25em !important;
+  background: var(--foil-grad) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  text-align: center !important;
+  position: absolute !important;
+  bottom: 8.5% !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* Wax Seal */
+.e2__seal {
+  width: 22% !important;
+  cursor: pointer !important;
+  filter: drop-shadow(
+    0 calc(3px + var(--seal-shadow) * 14px)
+      calc(6px + var(--seal-shadow) * 14px)
+      rgba(74, 42, 42, calc(0.48 - var(--seal-shadow) * 0.15))
+  ) !important;
+}
+.e2__seal:hover {
+  transform: translate(-50%, -50%) scale(1.04) !important;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}

@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="km">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#4a2a2a" />
+    <title>សិរីសួស្តីអាពាហ៍ពិពាហ៍ · អេង ម៉ារ៉ាឌី & កៅ ហែមសុជាតា</title>
+    <meta
+      name="description"
+      content="សូមគោរពអញ្ជើញចូលរួមពិធីអាពាហ៍ពិពាហ៍ អេង ម៉ារ៉ាឌី & កៅ ហែមសុជាតា · Eng Marady & Kao Hemsocheata wedding invitation"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="សិរីសួស្តីអាពាហ៍ពិពាហ៍ · ម៉ារ៉ាឌី & សុជាតា"
+    />
+    <meta
+      property="og:description"
+      content="សូមគោរពអញ្ជើញ · You are warmly invited to the wedding of Eng Marady & Kao Hemsocheata"
+    />
+    <meta property="og:image" content="/og.jpg" />
+    <meta property="og:url" content="/" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="/img/hero-m-640.webp 640w, /img/hero-m-1280.webp 1280w, /img/hero-m-2000.webp 2000w"
+      imagesizes="100vw"
+      media="(max-aspect-ratio: 1/1)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      imagesrcset="/img/hero-1280.webp 1280w, /img/hero-2000.webp 2000w"
+      imagesizes="100vw"
+      media="(min-aspect-ratio: 1/1)"
+    />
+    <script type="module" crossorigin src="/assets/main-BGe0zEMM.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/i18n-DAnwKMRV.js" />
+    <link rel="stylesheet" crossorigin href="/assets/i18n-CRxUmRO5.css" />
+  </head>
+  <body class="is-locked" data-lang="km">
+    <!-- global SVG defs -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <linearGradient
+          id="g-foil"
+          x1="0"
+          y1="0"
+          x2="1"
+          y2=".35"
+          gradientUnits="objectBoundingBox"
+        >
+          <stop offset="0" stop-color="#a8695a" />
+          <stop offset=".25" stop-color="#e0a995" />
+          <stop offset=".45" stop-color="#f8e1d6" />
+          <stop offset=".62" stop-color="#e0a995" />
+          <stop offset=".85" stop-color="#a8695a" />
+          <stop offset="1" stop-color="#e0a995" />
+        </linearGradient>
+        <clipPath id="clip-scallop" clipPathUnits="objectBoundingBox">
+          <path id="clip-scallop-path" d="M0 0H1V1H0Z" />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- 0 · PRELOADER -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader__inner">
+        <div id="pre-lotus"></div>
+        <div class="preloader__count" id="pre-count">០</div>
+      </div>
+      <div class="preloader__curtain"></div>
+    </div>
+
+    <!-- 0b · ENVELOPE GATE -->
+    <div
+      class="gate"
+      id="gate"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="gate-guest"
+    >
+      <picture class="gate__bg" aria-hidden="true">
+        <source
+          media="(max-aspect-ratio: 1/1)"
+          srcset="/img/words-640.webp 640w, /img/words-1280.webp 1280w"
+          sizes="100vw"
+        />
+        <img
+          src="/img/pre-wedding10.jpg"
+          srcset="/img/pre-wedding10.jpg 1280w, /img/pre-wedding10.jpg 2000w"
+          sizes="100vw"
+          alt=""
+        />
+      </picture>
+      <svg
+        class="gate__florals emboss"
+        id="gate-florals"
+        viewBox="0 0 400 800"
+        preserveAspectRatio="xMidYMid slice"
+        aria-hidden="true"
+      ></svg>
+      <div class="gate__stage">
+        <div class="gate__invite">
+          <div class="gate__kicker foil" data-t="kicker"></div>
+          <div class="gate__sub" data-t="weddingInvitation"></div>
+        </div>
+        <div id="env-mount"></div>
+        <div class="gate__hint" data-t="tapSeal"></div>
+      </div>
+      <div class="gate__dim" aria-hidden="true"></div>
+    </div>
+
+    <!-- HUD -->
+    <header class="hud">
+      <a class="hud__mono" href="#top" id="hud-mono" aria-label="Top"></a>
+      <div class="hud__right">
+        <button
+          class="chip"
+          id="lang-toggle"
+          type="button"
+          aria-label="Switch language"
+        >
+          <span class="lang-km">ខ្មែរ</span> / EN
+        </button>
+        <button
+          class="chip"
+          id="music-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Music"
+        >
+          <span class="bars" aria-hidden="true"
+            ><i></i><i></i><i></i><i></i
+          ></span>
+        </button>
+      </div>
+    </header>
+    <div class="vine-progress" aria-hidden="true"><span></span><b></b></div>
+    <a class="btn rsvp-pill" href="#venue" data-t="location"></a>
+
+    <main id="main">
+      <!-- 1 · COVER / HERO (ធៀបការ over the photo) -->
+      <section
+        class="hero cover"
+        id="hero"
+        aria-label="Wedding invitation cover"
+      >
+        <div class="hero__media" id="hero-media">
+          <picture>
+            <source
+              media="(max-aspect-ratio: 1/1)"
+              srcset="
+                /img/hero-m-640.webp   640w,
+                /img/hero-m-1280.webp 1280w,
+                /img/hero-m-2000.webp 2000w
+              "
+              sizes="100vw"
+            />
+            <img
+              src="/img/pre-wedding-hero.jpg"
+              srcset="
+                /img/pre-wedding-hero.jpg 1280w,
+                /img/pre-wedding-hero.jpg 2000w
+              "
+              sizes="100vw"
+              alt="ម៉ារ៉ាឌី និង សុជាតា បណ្តែតប្រទីបផ្កាឈូកនៅស្រះឈូក · The couple floating lotus lanterns on the pond"
+              fetchpriority="high"
+            />
+          </picture>
+          <div class="hero__shade"></div>
+          <canvas class="hero__embers" id="hero-embers"></canvas>
+        </div>
+        <div data-orn="corner4" class="cover__corners"></div>
+        <div class="cover__inner">
+          <div class="cover__crest" data-orn="crest"></div>
+          <div class="cover__kicker foil" data-t="kicker"></div>
+          <div class="cover__sub" data-t="weddingInvitation"></div>
+          <div class="cover__lockup" data-lockup="cover"></div>
+          <div class="hero__en" id="names-en"></div>
+          <div class="cover__invite" data-t="inviteTo"></div>
+          <div class="cover__chips">
+            <div class="chip-d">
+              <small data-t="dayLabel"></small><b data-date="weekdayShort"></b>
+            </div>
+            <div class="chip-d">
+              <small data-t="dateLabel"></small><b data-date="day"></b>
+            </div>
+            <div class="chip-d">
+              <small data-t="monthLabel"></small><b data-date="month"></b>
+            </div>
+            <div class="chip-d">
+              <small data-t="yearLabel"></small><b data-date="year"></b>
+            </div>
+          </div>
+          <div class="cover__lunar" data-date="lunar"></div>
+          <div class="cover__venue">
+            <span data-venue="name"></span> · <span data-venue="address"></span>
+          </div>
+          <a class="cover__cue" href="#words"
+            ><span data-t="scrollOpen"></span><i></i
+          ></a>
+        </div>
+      </section>
+
+      <!-- 2 · INVITATION WORDS -->
+      <section class="chapter words" id="words">
+        <svg
+          class="words__florals emboss"
+          id="words-florals"
+          viewBox="0 0 260 260"
+          aria-hidden="true"
+        ></svg>
+        <div class="words__grid">
+          <div class="arch" data-parallax-wrap>
+            <img
+              src="/img/pre-wedding3.jpg"
+              srcset="/img/pre-wedding3.jpg 640w, /img/pre-wedding3.jpg 1280w"
+              sizes="(max-width: 860px) 78vw, 40vw"
+              alt="The couple on the wooden pavilion"
+              loading="lazy"
+              data-parallax
+            />
+          </div>
+          <div class="words__text">
+            <span class="kicker" data-t="wordsKicker"></span>
+            <h2 class="title" data-t="wordsTitle" data-lines></h2>
+            <p class="words__body serif-kh" data-t="wordsBody" data-lines></p>
+            <div class="parents" data-reveal>
+              <div>
+                <h4 data-t="groomParents"></h4>
+                <p data-parents="groom"></p>
+              </div>
+              <div>
+                <h4 data-t="brideParents"></h4>
+                <p data-parents="bride"></p>
+              </div>
+            </div>
+            <p class="words__thanks" data-t="wordsThanks" data-reveal></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3 · THE COUPLE -->
+      <section class="chapter couple" id="couple">
+        <div class="chapter__head">
+          <span class="kicker" data-t="coupleKicker"></span>
+          <div data-orn="divider"></div>
+        </div>
+        <div class="couple__stage">
+          <div class="person" data-from="left">
+            <div class="caps" data-t="groomLabel"></div>
+            <div class="person__name foil" data-name="groom-km"></div>
+            <div class="person__en" data-name="groom-en"></div>
+            <div class="person__parents">
+              <span data-t="sonOf"></span><br /><span
+                data-parents="groom"
+              ></span>
+            </div>
+          </div>
+          <div class="couple__photo">
+            <div class="scallop-frame" id="couple-frame">
+              <img
+                src="/img/pre-wedding6.jpg"
+                srcset="
+                  /img/pre-wedding6.jpg  640w,
+                  /img/pre-wedding6.jpg 1280w,
+                  /img/pre-wedding6.jpg 2000w
+                "
+                sizes="(max-width:860px) 86vw, 40vw"
+                alt="Marady and Socheata in the wooden house"
+                loading="lazy"
+                style="object-position: 40% 50%"
+              />
+            </div>
+            <div class="couple__amp" id="couple-amp">
+              <span class="foil">&amp;</span>
+            </div>
+            <div class="couple__butterfly" id="couple-butterfly"></div>
+          </div>
+          <div class="person" data-from="right">
+            <div class="caps" data-t="brideLabel"></div>
+            <div class="person__name foil" data-name="bride-km"></div>
+            <div class="person__en" data-name="bride-en"></div>
+            <div class="person__parents">
+              <span data-t="daughterOf"></span><br /><span
+                data-parents="bride"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 · COUNTDOWN -->
+      <section class="chapter countdown" id="countdown">
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee__track" id="marquee"></div>
+        </div>
+        <div class="chapter__head" style="margin-bottom: 1.5rem">
+          <span class="kicker" data-t="countdownKicker"></span>
+        </div>
+        <div class="count" id="count" aria-live="polite">
+          <div class="count__unit">
+            <span class="count__num foil" data-u="d">០០</span
+            ><span class="count__label caps" data-t="days"></span>
+          </div>
+          <div class="count__unit">
+            <span class="count__num foil" data-u="h">០០</span
+            ><span class="count__label caps" data-t="hours"></span>
+          </div>
+          <div class="count__unit">
+            <span class="count__num foil" data-u="m">០០</span
+            ><span class="count__label caps" data-t="minutes"></span>
+          </div>
+          <div class="count__unit">
+            <span class="count__num foil" data-u="s">០០</span
+            ><span class="count__label caps" data-t="seconds"></span>
+          </div>
+        </div>
+        <div class="count__date">
+          <div data-orn="divider"></div>
+          <div data-date="weekday" class="caps"></div>
+          <div data-date="date"></div>
+          <div data-date="time"></div>
+        </div>
+      </section>
+
+      <!-- 5 · PROGRAMME -->
+      <section class="chapter programme" id="programme">
+        <div class="programme__grid">
+          <div class="programme__aside">
+            <h2 class="display" data-t="programmeKicker" data-lines></h2>
+            <div class="tbc" data-tbc data-t="dateTbc"></div>
+          </div>
+          <div class="programme__list">
+            <div class="programme__thread" aria-hidden="true">
+              <span></span>
+            </div>
+            <ol
+              id="programme-list"
+              style="list-style: none; margin: 0; padding: 0"
+            ></ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 · STORY -->
+      <section class="story" id="story">
+        <div class="story__pin">
+          <canvas class="story__embers" id="story-embers"></canvas>
+          <div class="story__track" id="story-track">
+            <div class="story__intro">
+              <span class="kicker" data-t="storyKicker"></span>
+              <h2 class="display" data-t="storyTitle"></h2>
+              <div class="caps" data-t="storyHint"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 · POND -->
+      <section class="pond" id="pond">
+        <div class="pond__sticky" id="pond-sticky">
+          <picture>
+            <source
+              media="(min-aspect-ratio: 1/1)"
+              srcset="
+                /img/pre-wedding-pond.jpg 1280w,
+                /img/pre-wedding-pond.jpg 2000w
+              "
+              sizes="100vw"
+            />
+            <img
+              class="pond__fallback"
+              src="/img/pre-wedding11.jpg"
+              srcset="
+                /img/pre-wedding11.jpg  640w,
+                /img/pre-wedding11.jpg 1280w,
+                /img/pre-wedding11.jpg 2000w
+              "
+              sizes="100vw"
+              alt="Candles and lotus offerings on the pond"
+              loading="lazy"
+              id="pond-img"
+            />
+          </picture>
+          <canvas class="pond__canvas" id="pond-canvas"></canvas>
+          <div class="pond__shade"></div>
+          <div class="pond__text">
+            <div class="kicker" data-t="pondKicker"></div>
+            <div class="display foil" style="font-size: var(--t-l)">
+              <span data-name="groom-short"></span>
+              <span style="font-family: var(--f-script)">&amp;</span>
+              <span data-name="bride-short"></span>
+            </div>
+          </div>
+          <div class="pond__hint" data-t="pondLine"></div>
+        </div>
+      </section>
+
+      <!-- 8 · GALLERY -->
+      <section class="chapter gallery" id="gallery">
+        <div class="chapter__head">
+          <span class="kicker" data-t="galleryKicker"></span>
+          <h2 class="display" data-t="galleryTitle" data-lines></h2>
+          <div data-orn="divider"></div>
+        </div>
+        <div class="gallery__grid" id="gallery-grid"></div>
+      </section>
+
+      <!-- 9 · VENUE -->
+      <section class="chapter venue" id="venue">
+        <span
+          class="kicker"
+          data-t="venueKicker"
+          style="color: var(--foil); display: block"
+        ></span>
+        <div id="angkor"></div>
+        <div class="venue__name foil" data-venue="name"></div>
+        <div class="venue__meta" data-venue="address"></div>
+        <div class="venue__when">
+          <div
+            class="caps"
+            data-date="weekday"
+            style="color: var(--foil-hi)"
+          ></div>
+          <div data-date="date"></div>
+          <div data-date="time"></div>
+          <div class="tbc" data-tbc data-t="dateTbc"></div>
+        </div>
+        <div class="venue__map">
+          <iframe
+            id="venue-map"
+            title="Google Map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="venue__actions">
+          <a class="btn" id="map-link" target="_blank" rel="noopener"
+            ><span data-t="openMap"></span
+          ></a>
+          <button class="btn" id="ics-btn" type="button">
+            <span data-t="addCalendar"></span>
+          </button>
+        </div>
+        <p
+          class="venue__meta"
+          data-venue="note"
+          style="margin-top: 1.4rem; font-size: 0.9rem"
+        ></p>
+      </section>
+
+
+      <!-- 11 · FINALE -->
+      <section class="chapter finale" id="finale">
+        <div>
+          <div class="finale__candles" id="candles" aria-hidden="true">
+            <i class="candle"></i><i class="candle"></i><i class="candle"></i
+            ><i class="candle"></i><i class="candle"></i><i class="candle"></i
+            ><i class="candle"></i>
+          </div>
+          <h2 class="display foil" data-t="thanks"></h2>
+          <p class="finale__line" data-t="thanksLine"></p>
+          <div class="finale__actions">
+            <a
+              class="share share--tg"
+              id="share-tg"
+              target="_blank"
+              rel="noopener"
+              ><i data-icon="telegram"></i
+              ><span><small data-t="shareVia"></small>Telegram</span></a
+            >
+            <a
+              class="share share--ms"
+              id="share-ms"
+              target="_blank"
+              rel="noopener"
+              ><i data-icon="messenger"></i
+              ><span><small data-t="shareVia"></small>Messenger</span></a
+            >
+            <a
+              class="share share--fb"
+              id="share-fb"
+              target="_blank"
+              rel="noopener"
+              ><i data-icon="facebook"></i
+              ><span><small data-t="shareVia"></small>Facebook</span></a
+            >
+            <button class="share share--copy" id="share-copy" type="button">
+              <i data-icon="link"></i
+              ><span
+                ><small data-t="copyLinkSmall"></small><b data-t="copyLink"></b
+              ></span>
+            </button>
+          </div>
+          <div class="finale__mono" id="finale-mono"></div>
+        </div>
+      </section>
+      <footer class="footer">
+        <span data-name="groom-km"></span> &amp;
+        <span data-name="bride-km"></span> · <span id="year"></span>
+      </footer>
+    </main>
+
+    <div class="cursor" aria-hidden="true">
+      <div class="cursor__glow"></div>
+      <div class="cursor__dot"></div>
+      <div class="cursor__label"></div>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+      <img id="lb-img" alt="" />
+      <button
+        class="lb-btn lb-close"
+        type="button"
+        id="lb-close"
+        aria-label="Close"
+      >
+        ✕
+      </button>
+      <button
+        class="lb-btn lb-prev"
+        type="button"
+        id="lb-prev"
+        aria-label="Previous"
+      >
+        ‹
+      </button>
+      <button
+        class="lb-btn lb-next"
+        type="button"
+        id="lb-next"
+        aria-label="Next"
+      >
+        ›
+      </button>
+      <div class="lb-count caps" id="lb-count"></div>
+    </dialog>
+  </body>
+</html>
