@@ -14357,14 +14357,15 @@ function Ap() {
 }
 async function jp(e) {
   if (kp !== null) return kp;
+  if (!e) return (kp = !1);
   try {
     let t = await fetch(e, { method: `HEAD` });
-    if (!t.ok && t.status === 405) {
+    if (!t.ok && (t.status === 405 || t.status === 404)) {
       t = await fetch(e, { method: `GET` });
     }
     kp = t.ok;
   } catch {
-    kp = !1;
+    kp = !0; // Assume true if fetch error to let Audio element attempt to play it
   }
   return kp;
 }
@@ -14428,17 +14429,32 @@ function Pp() {
     }));
 }
 async function Fp(e, t) {
-  return (
-    (Op = e),
-    e
-      ? (await jp(t))
-        ? (Ep || ((Ep = new Audio(t)), (Ep.loop = !0), (Ep.volume = 0)),
-          Ep.play().catch(() => {}),
-          Ip(Ep, 0.55))
-        : Dp || Pp()
-      : (Ep && Ip(Ep, 0, () => Ep.pause()), Dp && (Dp.stop(), (Dp = null))),
-    Op
-  );
+  Ap();
+  Op = e;
+  if (e) {
+    if (!Ep) {
+      Ep = new Audio(t || `/audio/song.mp3`);
+      Ep.loop = !0;
+      Ep.preload = `auto`;
+      Ep.volume = 0.55;
+    }
+    try {
+      await Ep.play();
+      Ip(Ep, 0.55);
+    } catch (err) {
+      console.warn("Audio playback failed or requires user gesture:", err);
+      if (!Dp) Pp();
+    }
+  } else {
+    if (Ep) {
+      Ip(Ep, 0, () => Ep.pause());
+    }
+    if (Dp) {
+      Dp.stop();
+      Dp = null;
+    }
+  }
+  return Op;
 }
 function Ip(e, t, n) {
   let r = e.volume,

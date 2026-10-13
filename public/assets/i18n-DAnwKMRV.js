@@ -48,7 +48,7 @@ var e = {
     families: {
       groom: {
         father: { km: `លោក គឹម ចាន់ធូ`, en: `Mr. Kim Chanthou` },
-        mother: { km: `លោកស្រី សុម៉ាលី`, en: `Mrs. Somaly` },
+        mother: { km: `លោកស្រី ឃុន សុម៉ាលី`, en: `Mrs. Khun Somaly` },
       },
       bride: {
         father: { km: `លោក ចៅ ចិត្រ`, en: `Mr. Chao Chitr` },
