@@ -14720,7 +14720,7 @@ function tm() {
       let n = e.families[t.dataset.parents];
       t.innerHTML =
         $ === `km`
-          ? `${n.father.km}<br/>និង${n.mother.km}`
+          ? `${n.father.km}<br/>${n.father.km ? "និង" : ""}${n.mother.km}`
           : `${n.father.en}<br/>&amp; ${n.mother.en}`;
     }));
   let s = Z(`#gate-guest`);
